@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Input } from "@/Components/ui/input";
 import { Button } from "@/Components/ui/button";
 
-function AddQuote({ onSubmit }) {
+function AddQuote({ onSubmit ,onSort}) {
   const [inputValue, setIntputValue] = useState("");
 
   const handleSubmit = (e) => {
@@ -27,7 +27,7 @@ function AddQuote({ onSubmit }) {
 
       <div className="flex gap-2">
         <Button>Add</Button>
-        <Button>Sort</Button>
+        <Button onclick={onSort}>Sort</Button>
       </div>
     </form>
   );
